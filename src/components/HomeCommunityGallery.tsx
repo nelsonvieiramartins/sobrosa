@@ -65,13 +65,12 @@ export default function HomeCommunityGallery() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <div className="flex items-center gap-2 mb-1">
+              <div className="flex items-center gap-2">
                 <Icon icon="lucide:tag" className="text-sm" style={{ color: "#FF8C00" }} />
                 <span className="text-white text-xs font-bold uppercase tracking-wider">
                   {photo.modalidade}
                 </span>
               </div>
-              <p className="text-gray-300 text-xs">{photo.user}</p>
             </div>
           </Link>
         ))}
