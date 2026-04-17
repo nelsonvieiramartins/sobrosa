@@ -167,7 +167,6 @@ export default function Footer({ hideNewsletter = false }: { hideNewsletter?: bo
             © 2025 SOBROSA. TODOS OS DIREITOS RESERVADOS.
           </p>
           <div className="flex items-center gap-6 opacity-30">
-            <Icon icon="logos:mastercard" className="text-2xl" />
             <Icon icon="logos:pix" className="text-xl" style={{ filter: "grayscale(1) invert(1)" }} />
           </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
