@@ -3,13 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { categories } from "@/lib/categories";
 
-const mixPhotos = categories.map((cat) => ({
-  ...cat.communityPhotos[0],
-  modalidade: cat.label,
-  slug: cat.slug,
-}));
+const mixPhotos = [
+  { image: "https://images.unsplash.com/photo-1541625602330-2277a4cd1f59?q=80&w=600", modalidade: "Ciclismo", slug: "ciclismo" },
+  { image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600", modalidade: "Futebol", slug: "futebol" },
+  { image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600", modalidade: "Corrida", slug: "corrida" },
+  { image: "https://images.unsplash.com/photo-1529230117013-bc53b207908b?q=80&w=600", modalidade: "Pesca", slug: "pesca" },
+  { image: "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=600", modalidade: "Ciclismo", slug: "ciclismo" },
+  { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600", modalidade: "Eventos", slug: "eventos-promocional" },
+  { image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600", modalidade: "Corrida", slug: "corrida" },
+  { image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600", modalidade: "Corporativo", slug: "corporativa" },
+  { image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600", modalidade: "Futebol", slug: "futebol" },
+  { image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=600", modalidade: "Pesca", slug: "pesca" },
+];
 
 export default function HomeCommunityGallery() {
   const photos = [...mixPhotos, ...mixPhotos];
