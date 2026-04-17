@@ -19,12 +19,12 @@ const helpLinks = [
 
 const socialIcons = ["lucide:instagram", "lucide:twitter", "lucide:facebook"];
 
-export default function Footer() {
+export default function Footer({ hideNewsletter = false }: { hideNewsletter?: boolean }) {
   return (
     <footer className="bg-black text-white pt-24 pb-12 px-6 border-t border-white/5">
       <div className="max-w-[1440px] mx-auto">
         {/* Newsletter */}
-        <div className="grid grid-cols-12 gap-8 items-center pb-20 border-b border-white/10">
+        {!hideNewsletter && <div className="grid grid-cols-12 gap-8 items-center pb-20 border-b border-white/10">
           <div className="col-span-12 lg:col-span-6">
             <h3 className="font-tanker text-5xl uppercase mb-4">
               Junte-se ao Time
@@ -50,7 +50,7 @@ export default function Footer() {
               </button>
             </form>
           </div>
-        </div>
+        </div>}
 
         {/* Main Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-20">

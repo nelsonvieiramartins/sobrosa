@@ -39,7 +39,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <CommunityGallery category={category} />
         <CategoryCTA category={category} />
       </main>
-      <Footer />
+      <Footer hideNewsletter />
     </div>
   );
 }
