@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import NicheGrid from "@/components/NicheGrid";
 import SocialProof from "@/components/SocialProof";
 import ProductionBanner from "@/components/ProductionBanner";
-import BestSellers from "@/components/BestSellers";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ export default function Home() {
         <NicheGrid />
         <SocialProof />
         <ProductionBanner />
-        <BestSellers />
         <ContactSection />
       </main>
       <Footer />
