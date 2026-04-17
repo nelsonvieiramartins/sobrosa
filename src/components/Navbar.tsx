@@ -66,7 +66,7 @@ export default function Navbar({ dark = false }: NavbarProps) {
             <Link href="/" className={`transition-colors ${hoverColor}`}>Início</Link>
           </li>
           <li>
-            <span className="cursor-default opacity-40">Quem Somos</span>
+            <Link href="/quem-somos" className={`transition-colors ${hoverColor}`}>Quem Somos</Link>
           </li>
 
           {/* Modalidades — mega dropdown */}
@@ -211,7 +211,11 @@ export default function Navbar({ dark = false }: NavbarProps) {
                 Início
               </Link>
             </li>
-            <li className="opacity-40">Quem Somos</li>
+            <li>
+              <Link href="/quem-somos" onClick={() => setMobileOpen(false)} className="hover:text-orange-400 transition-colors">
+                Quem Somos
+              </Link>
+            </li>
             <li>
               <p className="mb-3" style={{ color: "#FF8C00" }}>Modalidades</p>
               <ul className="space-y-3 pl-4">
