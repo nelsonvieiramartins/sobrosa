@@ -166,9 +166,6 @@ export default function Footer({ hideNewsletter = false }: { hideNewsletter?: bo
           <p className="text-xs text-gray-500 uppercase tracking-widest">
             © 2025 SOBROSA. TODOS OS DIREITOS RESERVADOS.
           </p>
-          <div className="flex items-center gap-6 opacity-30">
-            <Icon icon="logos:pix" className="text-xl" style={{ filter: "grayscale(1) invert(1)" }} />
-          </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
             <a href="#" className="hover:text-white transition-colors">Termos</a>
