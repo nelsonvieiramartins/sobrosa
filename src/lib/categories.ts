@@ -43,6 +43,7 @@ export const categories: Category[] = [
   {
     slug: "ciclismo",
     label: "Ciclismo",
+    heroImageFlip: true,
     heroTitle: "Respirabilidade e",
     heroHighlight: "Tecnologia de Elite",
     heroSubtitle:
@@ -224,12 +225,12 @@ export const categories: Category[] = [
   {
     slug: "pesca",
     label: "Pesca",
+    heroImageFlip: true,
     heroTitle: "Proteção e",
     heroHighlight: "Secagem Ultrarrápida",
     heroSubtitle:
       "Peças pensadas para os desafios da natureza. UV 50+, secagem instantânea e total liberdade nos movimentos.",
-    heroImage:
-      "https://images.unsplash.com/photo-1529230117013-bc53b207908b?q=80&w=2000",
+    heroImage: "/img/pesca.jpeg",
     heroDecorText: "FISHING",
     advantages: [
       {
