@@ -19,7 +19,7 @@ export default function CategoryCTA({ category }: { category: Category }) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/556299999999"
+                href="https://wa.me/5562991264305"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 px-10 py-5 font-bold uppercase text-sm tracking-widest text-black transition-colors hover:bg-white"

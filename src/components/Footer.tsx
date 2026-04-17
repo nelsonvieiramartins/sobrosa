@@ -22,7 +22,10 @@ const institucional = [
   { label: "Contato", href: "/#contato" },
 ];
 
-const socialIcons = ["lucide:instagram", "lucide:twitter", "lucide:facebook"];
+const socialLinks = [
+  { icon: "lucide:instagram", href: "https://www.instagram.com/sobrosa_marca_de_atleta" },
+  { icon: "lucide:facebook", href: "#" },
+];
 
 export default function Footer({ hideNewsletter = false }: { hideNewsletter?: boolean }) {
   return (
@@ -73,11 +76,13 @@ export default function Footer({ hideNewsletter = false }: { hideNewsletter?: bo
               Elevando o padrão do vestuário esportivo com inovação e autenticidade diretamente do centro-oeste para o mundo.
             </p>
             <div className="flex gap-4">
-              {socialIcons.map((icon) => (
+              {socialLinks.map(({ icon, href }) => (
                 <a
                   key={icon}
-                  href="#"
-                  className="w-10 h-10 border border-white/10 flex items-center justify-center transition-all hover:text-black"
+                  href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-white/10 flex items-center justify-center transition-all"
                   style={{ color: "white" }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.backgroundColor = "#FF8C00";
@@ -127,20 +132,30 @@ export default function Footer({ hideNewsletter = false }: { hideNewsletter?: bo
             <h4 className="font-bold uppercase text-sm tracking-widest mb-8">Contato</h4>
             <ul className="space-y-6 text-gray-400 text-sm">
               <li className="flex gap-3">
-                <Icon icon="lucide:map-pin" style={{ color: "#FF8C00" }} />
+                <Icon icon="lucide:map-pin" className="shrink-0 mt-0.5" style={{ color: "#FF8C00" }} />
                 <span>
-                  Goiânia - GO, Brasil
+                  Rua 1138, nº 417, St. Marista
                   <br />
-                  Polo Industrial
+                  Goiânia - GO · 74180-170
                 </span>
               </li>
               <li className="flex gap-3">
-                <Icon icon="lucide:phone" style={{ color: "#FF8C00" }} />
-                <span>+55 (62) 9999-9999</span>
+                <Icon icon="lucide:phone" className="shrink-0" style={{ color: "#FF8C00" }} />
+                <a href="tel:+556232811040" className="hover:text-orange-400 transition-colors">
+                  (62) 3281-1040
+                </a>
               </li>
               <li className="flex gap-3">
-                <Icon icon="lucide:mail" style={{ color: "#FF8C00" }} />
-                <span>contato@sobrosa.esp.br</span>
+                <Icon icon="simple-icons:whatsapp" className="shrink-0" style={{ color: "#FF8C00" }} />
+                <a href="https://wa.me/5562991264305" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
+                  (62) 9 9126-4305
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Icon icon="lucide:instagram" className="shrink-0" style={{ color: "#FF8C00" }} />
+                <a href="https://www.instagram.com/sobrosa_marca_de_atleta" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
+                  @sobrosa_marca_de_atleta
+                </a>
               </li>
             </ul>
           </div>

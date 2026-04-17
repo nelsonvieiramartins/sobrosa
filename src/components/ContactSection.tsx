@@ -88,7 +88,7 @@ export default function ContactSection() {
 
             <div className="space-y-6">
               <a
-                href="https://wa.me/556299999999"
+                href="https://wa.me/5562991264305"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-5 group"
@@ -108,7 +108,7 @@ export default function ContactSection() {
                     WhatsApp
                   </p>
                   <p className="text-white font-bold group-hover:text-[#FF8C00] transition-colors">
-                    +55 (62) 9999-9999
+                    (62) 9 9126-4305
                   </p>
                 </div>
               </a>
@@ -153,7 +153,9 @@ export default function ContactSection() {
                     Fábrica
                   </p>
                   <p className="text-white font-bold">
-                    Polo Industrial · Goiânia, GO
+                    Rua 1138, nº 417, St. Marista
+                    <br />
+                    <span className="text-gray-400 font-normal text-sm">Goiânia - GO · 74180-170</span>
                   </p>
                 </div>
               </div>
