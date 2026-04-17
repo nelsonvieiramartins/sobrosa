@@ -66,7 +66,7 @@ export default function ProductionBanner() {
 
         {/* CTA Card */}
         <div className="lg:w-1/3 flex justify-center w-full">
-          <a href="#" className="group relative w-full">
+          <a href="#contato" className="group relative w-full">
             <div
               className="absolute -inset-1 opacity-20 blur group-hover:opacity-40 transition"
               style={{ backgroundColor: "#FF8C00" }}

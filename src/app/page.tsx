@@ -4,6 +4,7 @@ import NicheGrid from "@/components/NicheGrid";
 import SocialProof from "@/components/SocialProof";
 import ProductionBanner from "@/components/ProductionBanner";
 import BestSellers from "@/components/BestSellers";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <SocialProof />
         <ProductionBanner />
         <BestSellers />
+        <ContactSection />
       </main>
       <Footer />
     </div>

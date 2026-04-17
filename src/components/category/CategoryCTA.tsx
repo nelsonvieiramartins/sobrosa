@@ -29,11 +29,11 @@ export default function CategoryCTA({ category }: { category: Category }) {
                 WhatsApp Agora
               </a>
               <a
-                href="mailto:contato@sobrosa.esp.br"
-                className="flex items-center justify-center gap-3 border border-white/20 px-10 py-5 font-bold uppercase text-sm tracking-widest text-white hover:border-orange-400 transition-all"
+                href="/#contato"
+                className="flex items-center justify-center gap-3 border border-white/20 px-10 py-5 font-bold uppercase text-sm tracking-widest text-white hover:border-[#FF8C00] transition-all"
               >
-                <Icon icon="lucide:mail" />
-                Enviar E-mail
+                <Icon icon="lucide:file-text" />
+                Preencher Formulário
               </a>
             </div>
           </div>

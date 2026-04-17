@@ -38,7 +38,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
-              href="#"
+              href="#contato"
               className="w-full sm:w-auto text-black px-12 py-6 font-bold uppercase text-sm tracking-widest hover:scale-105 transition-transform flex items-center justify-center gap-3"
               style={{ backgroundColor: "#FF8C00" }}
             >
