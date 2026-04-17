@@ -10,6 +10,21 @@ interface NavbarProps {
   dark?: boolean;
 }
 
+const personalizado = {
+  slug: "personalizado",
+  label: "Personalizado",
+  href: "/#contato",
+  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600",
+};
+
+const allNavItems = [
+  ...categories.map((c) => ({ slug: c.slug, label: c.label, href: `/categorias/${c.slug}`, image: c.heroImage, subtitle: c.heroSubtitle })),
+  { ...personalizado, subtitle: "Criamos algo único para você. Fale com nossa equipe." },
+];
+
+const col1 = allNavItems.slice(0, 4);
+const col2 = allNavItems.slice(4);
+
 export default function Navbar({ dark = false }: NavbarProps) {
   const [cartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,7 +41,7 @@ export default function Navbar({ dark = false }: NavbarProps) {
     closeTimer.current = setTimeout(() => setDropdownOpen(false), 150);
   };
 
-  const activeCategory = categories.find((c) => c.slug === hoveredSlug) ?? categories[0];
+  const activeCategory = categories.find((c) => c.slug === hoveredSlug);
 
   const bg = dark ? "bg-black/95 border-white/10" : "bg-white/95 border-black/5";
   const textColor = dark ? "text-white" : "text-black";
@@ -91,14 +106,14 @@ export default function Navbar({ dark = false }: NavbarProps) {
                 {/* LEFT — dynamic image */}
                 <div className="w-72 flex-shrink-0 relative overflow-hidden bg-black">
                   <div className="relative h-52 w-full">
-                    {categories.map((cat) => (
+                    {allNavItems.map((item) => (
                       <Image
-                        key={cat.slug}
-                        src={cat.heroImage}
-                        alt={cat.label}
+                        key={item.slug}
+                        src={item.image}
+                        alt={item.label}
                         fill
-                        className={`object-cover transition-opacity duration-400 ${
-                          cat.slug === hoveredSlug ? "opacity-100" : "opacity-0"
+                        className={`object-cover transition-opacity duration-300 ${
+                          item.slug === hoveredSlug ? "opacity-100" : "opacity-0"
                         }`}
                       />
                     ))}
@@ -108,13 +123,13 @@ export default function Navbar({ dark = false }: NavbarProps) {
                         Modalidade
                       </p>
                       <p className="font-tanker text-2xl text-white uppercase leading-none">
-                        {activeCategory.label}
+                        {activeCategory?.label ?? "Personalizado"}
                       </p>
                     </div>
                   </div>
                   <div className="p-4 bg-[#0A0A0A]">
                     <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">
-                      {activeCategory.heroSubtitle}
+                      {allNavItems.find(i => i.slug === hoveredSlug)?.subtitle ?? ""}
                     </p>
                   </div>
                 </div>
@@ -122,59 +137,51 @@ export default function Navbar({ dark = false }: NavbarProps) {
                 {/* Divider */}
                 <div className="w-px bg-black/8 mx-8 self-stretch" />
 
-                {/* RIGHT — category list */}
+                {/* RIGHT — 2 columns */}
                 <div className="flex-1">
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-6">
                     Escolha sua Modalidade
                   </p>
-                  <ul className="space-y-1">
-                    {categories.map((cat) => (
-                      <li key={cat.slug}>
-                        <Link
-                          href={`/categorias/${cat.slug}`}
-                          onMouseEnter={() => setHoveredSlug(cat.slug)}
-                          className={`group flex items-center justify-between px-4 py-3 transition-all duration-150 ${
-                            hoveredSlug === cat.slug
-                              ? "bg-black text-white"
-                              : "text-black hover:bg-black hover:text-white"
-                          }`}
-                          onClick={() => setDropdownOpen(false)}
-                        >
-                          <div className="flex items-center gap-4">
-                            <div
-                              className={`w-1 h-6 transition-all duration-150 ${
-                                hoveredSlug === cat.slug ? "opacity-100" : "opacity-0"
+                  <div className="grid grid-cols-2 gap-x-8">
+                    {[col1, col2].map((col, ci) => (
+                      <ul key={ci} className="space-y-1">
+                        {col.map((item) => (
+                          <li key={item.slug}>
+                            <Link
+                              href={item.href}
+                              onMouseEnter={() => setHoveredSlug(item.slug)}
+                              className={`group flex items-center justify-between px-4 py-3 transition-all duration-150 ${
+                                hoveredSlug === item.slug
+                                  ? "bg-black text-white"
+                                  : "text-black hover:bg-black hover:text-white"
                               }`}
-                              style={{ backgroundColor: "#FF8C00" }}
-                            />
-                            <span className="font-bold uppercase text-sm tracking-widest">
-                              {cat.label}
-                            </span>
-                          </div>
-                          <Icon
-                            icon="lucide:arrow-right"
-                            className={`text-base transition-all duration-150 ${
-                              hoveredSlug === cat.slug
-                                ? "opacity-100 translate-x-0"
-                                : "opacity-0 -translate-x-2"
-                            }`}
-                            style={{ color: "#FF8C00" }}
-                          />
-                        </Link>
-                      </li>
+                              onClick={() => setDropdownOpen(false)}
+                            >
+                              <div className="flex items-center gap-3">
+                                <div
+                                  className={`w-1 h-5 flex-shrink-0 transition-opacity duration-150 ${
+                                    hoveredSlug === item.slug ? "opacity-100" : "opacity-0"
+                                  }`}
+                                  style={{ backgroundColor: "#FF8C00" }}
+                                />
+                                <span className="font-bold uppercase text-xs tracking-widest whitespace-nowrap">
+                                  {item.label}
+                                </span>
+                              </div>
+                              <Icon
+                                icon="lucide:arrow-right"
+                                className={`text-sm flex-shrink-0 ml-2 transition-all duration-150 ${
+                                  hoveredSlug === item.slug
+                                    ? "opacity-100 translate-x-0"
+                                    : "opacity-0 -translate-x-1"
+                                }`}
+                                style={{ color: "#FF8C00" }}
+                              />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     ))}
-                  </ul>
-
-                  {/* CTA bottom */}
-                  <div className="mt-6 pt-6 border-t border-black/8">
-                    <a
-                      href="/categorias/ciclismo"
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors"
-                      style={{ color: "#FF8C00" }}
-                    >
-                      Ver todas as modalidades
-                      <Icon icon="lucide:arrow-right" className="text-sm" />
-                    </a>
                   </div>
                 </div>
               </div>
@@ -219,14 +226,14 @@ export default function Navbar({ dark = false }: NavbarProps) {
             <li>
               <p className="mb-3" style={{ color: "#FF8C00" }}>Modalidades</p>
               <ul className="space-y-3 pl-4">
-                {categories.map((cat) => (
-                  <li key={cat.slug}>
+                {allNavItems.map((item) => (
+                  <li key={item.slug}>
                     <Link
-                      href={`/categorias/${cat.slug}`}
+                      href={item.href}
                       onClick={() => setMobileOpen(false)}
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      {cat.label}
+                      {item.label}
                     </Link>
                   </li>
                 ))}

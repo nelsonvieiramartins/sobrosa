@@ -399,6 +399,264 @@ export const categories: Category[] = [
       { image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600", user: "Pelada das Estrelas", instagramHandle: "@peladaestrelas" },
     ],
   },
+  {
+    slug: "corrida",
+    label: "Corrida",
+    heroTitle: "Leveza e",
+    heroHighlight: "Velocidade Máxima",
+    heroSubtitle:
+      "Do treino à largada. Camisetas técnicas, shorts de compressão e kits completos para corridas de rua, trail e ultramaratona.",
+    heroImage:
+      "https://images.unsplash.com/photo-1544899489-a083461b088c?q=80&w=2000",
+    heroDecorText: "RUNNING",
+    advantages: [
+      {
+        icon: "lucide:wind",
+        title: "Leveza Extrema",
+        description:
+          "Tecidos de 120g/m² com tecnologia mesh que mantém o corpo fresco mesmo nos treinos mais intensos.",
+      },
+      {
+        icon: "lucide:activity",
+        title: "Compressão Estratégica",
+        description:
+          "Shorts e calças com compressão graduada que reduzem a fadiga muscular e melhoram o desempenho.",
+      },
+      {
+        icon: "lucide:sun",
+        title: "Proteção UV 50+",
+        description:
+          "Ideal para corridas ao ar livre. Proteção solar máxima sem abrir mão da respirabilidade.",
+      },
+    ],
+    models: [
+      {
+        name: "Camiseta Speed Masculina",
+        tag: "Dry-Fit / Gola V",
+        image: "https://images.unsplash.com/photo-1544899489-a083461b088c?q=80&w=600",
+      },
+      {
+        name: "Camiseta Speed Feminina",
+        tag: "Slim Fit / Recortes",
+        image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600",
+      },
+      {
+        name: "Kit Trail Runner",
+        tag: "Camisa + Shorts Compressão",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600",
+      },
+    ],
+    portfolio: [
+      {
+        name: "Kit Maratona GO",
+        subtitle: "Corrida de Rua / Goiânia",
+        image: "https://images.unsplash.com/photo-1544899489-a083461b088c?q=80&w=600",
+        badge: "Road",
+        badgeColor: "#FF8C00",
+      },
+      {
+        name: "Trail Series",
+        subtitle: "Ultra / Mountain Run",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600",
+        badge: "Trail",
+        badgeColor: "#16a34a",
+      },
+      {
+        name: "5K Fun Run",
+        subtitle: "Corridas de Lazer",
+        image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600",
+        badge: "Fun",
+        badgeColor: "#fff",
+      },
+      {
+        name: "Kit Escola Atleta",
+        subtitle: "Corrida Escolar",
+        image: "https://images.unsplash.com/photo-1461897104016-0b3b00cc81ee?q=80&w=600",
+        badge: "Escolar",
+        badgeColor: "#7c3aed",
+      },
+    ],
+    communityPhotos: [
+      { image: "https://images.unsplash.com/photo-1544899489-a083461b088c?q=80&w=600", user: "Maratona GO", instagramHandle: "@maratonago" },
+      { image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600", user: "Run Cerrado", instagramHandle: "@runcerrado" },
+      { image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600", user: "Trail Chapada", instagramHandle: "@trailchapada" },
+      { image: "https://images.unsplash.com/photo-1461897104016-0b3b00cc81ee?q=80&w=600", user: "5K Goiânia", instagramHandle: "@5kgoiania" },
+      { image: "https://images.unsplash.com/photo-1544899489-a083461b088c?q=80&w=600", user: "Grupo Pedala Corre", instagramHandle: "@pedalacorre" },
+      { image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600", user: "Ana Runner", instagramHandle: "@anarunner" },
+    ],
+  },
+  {
+    slug: "eventos-promocional",
+    label: "Eventos / Promocional",
+    heroTitle: "Sua Marca no",
+    heroHighlight: "Centro do Evento",
+    heroSubtitle:
+      "Camisetas promocionais, uniformes de equipe de eventos e kits corporativos. Produção rápida para datas especiais e grandes volumes.",
+    heroImage:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000",
+    heroDecorText: "EVENTOS",
+    advantages: [
+      {
+        icon: "lucide:calendar",
+        title: "Entrega Expressa",
+        description:
+          "Produção prioritária para eventos com data marcada. Confirmamos prazo antes de fechar o pedido.",
+      },
+      {
+        icon: "lucide:users",
+        title: "Grandes Volumes",
+        description:
+          "Capacidade para produzir desde 50 até 10.000 peças. Preços escalonados por quantidade.",
+      },
+      {
+        icon: "lucide:palette",
+        title: "Sublimação Total",
+        description:
+          "Impressão de logos, patrocinadores e arte em alta definição. Cor fiel ao seu manual de marca.",
+      },
+    ],
+    models: [
+      {
+        name: "Camiseta Evento Básica",
+        tag: "Dry-Fit / Gola Redonda",
+        image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600",
+      },
+      {
+        name: "Polo Promocional",
+        tag: "Manga Curta / Botões",
+        image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600",
+      },
+      {
+        name: "Kit Staff Evento",
+        tag: "Camisa + Colete + Boné",
+        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600",
+      },
+    ],
+    portfolio: [
+      {
+        name: "Festival Cerrado",
+        subtitle: "10.000 camisetas",
+        image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600",
+        badge: "Festival",
+        badgeColor: "#FF8C00",
+      },
+      {
+        name: "Corrida Solidária",
+        subtitle: "ONG / Projeto Social",
+        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600",
+        badge: "Social",
+        badgeColor: "#16a34a",
+      },
+      {
+        name: "Congresso Médico",
+        subtitle: "Kit Staff + Participantes",
+        image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600",
+        badge: "Corporativo",
+        badgeColor: "#1d4ed8",
+      },
+      {
+        name: "Game Day Fãs",
+        subtitle: "Kit Torcida Organizada",
+        image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600",
+        badge: "Torcida",
+        badgeColor: "#fff",
+      },
+    ],
+    communityPhotos: [
+      { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600", user: "Festival Cerrado", instagramHandle: "@festivalcerrado" },
+      { image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600", user: "Corrida Solidária GO", instagramHandle: "@corridasolidaria" },
+      { image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600", user: "Staff Arena GO", instagramHandle: "@staffarenago" },
+      { image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600", user: "Torcida Goiás", instagramHandle: "@torcidagoias" },
+      { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600", user: "Expo Goiânia", instagramHandle: "@expogoiania" },
+      { image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600", user: "ONG Movimento", instagramHandle: "@ongmovimento" },
+    ],
+  },
+  {
+    slug: "corporativa",
+    label: "Corporativa",
+    heroTitle: "Identidade Visual",
+    heroHighlight: "que Representa",
+    heroSubtitle:
+      "Uniformes corporativos que comunicam profissionalismo. Polos, camisetas e kits completos com a identidade da sua empresa.",
+    heroImage:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2000",
+    heroDecorText: "CORP",
+    advantages: [
+      {
+        icon: "lucide:briefcase",
+        title: "Identidade Unificada",
+        description:
+          "Todos os colaboradores com visual padronizado e alinhado ao branding da empresa.",
+      },
+      {
+        icon: "lucide:badge-check",
+        title: "Qualidade Premium",
+        description:
+          "Tecidos de alta durabilidade para uso diário intenso. Manutenção fácil e resistência garantida.",
+      },
+      {
+        icon: "lucide:repeat",
+        title: "Reposição Simples",
+        description:
+          "Cadastramos seu pedido e facilitamos a reposição de estoque com o mesmo padrão de sempre.",
+      },
+    ],
+    models: [
+      {
+        name: "Polo Corporativa",
+        tag: "Bordado / Manga Curta",
+        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600",
+      },
+      {
+        name: "Camiseta Técnica",
+        tag: "Dry-Fit / Estampada",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600",
+      },
+      {
+        name: "Kit Completo RH",
+        tag: "Polo + Camiseta + Boné",
+        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600",
+      },
+    ],
+    portfolio: [
+      {
+        name: "Rede de Franquias",
+        subtitle: "500 colaboradores",
+        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600",
+        badge: "Franquia",
+        badgeColor: "#FF8C00",
+      },
+      {
+        name: "Startup Tech",
+        subtitle: "Kit Onboarding",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600",
+        badge: "Tech",
+        badgeColor: "#1d4ed8",
+      },
+      {
+        name: "Construtora Atlas",
+        subtitle: "Uniforme de Campo",
+        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600",
+        badge: "Construção",
+        badgeColor: "#fff",
+      },
+      {
+        name: "Clínica Vida",
+        subtitle: "Equipe de Saúde",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600",
+        badge: "Saúde",
+        badgeColor: "#16a34a",
+      },
+    ],
+    communityPhotos: [
+      { image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600", user: "Franquias GO", instagramHandle: "@franquiasgo" },
+      { image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600", user: "Startup Hub GO", instagramHandle: "@startuphubgo" },
+      { image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600", user: "Atlas Construtora", instagramHandle: "@atlasconstrutora" },
+      { image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600", user: "Clínica Vida", instagramHandle: "@clinicavida" },
+      { image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600", user: "RH Excellence", instagramHandle: "@rhexcellence" },
+      { image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600", user: "Team Builder GO", instagramHandle: "@teambuildergo" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {
