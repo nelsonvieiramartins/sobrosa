@@ -14,7 +14,7 @@ const personalizado = {
   slug: "personalizado",
   label: "Personalizado",
   href: "/#contato",
-  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600",
+  image: "/img/personalizado.jpg",
 };
 
 const allNavItems = [
@@ -81,7 +81,7 @@ export default function Navbar({ dark = false }: NavbarProps) {
               className={`flex items-center gap-1 transition-colors ${hoverColor}`}
               style={{ color: dropdownOpen ? "#FF8C00" : undefined }}
             >
-              Categorias
+              Modalidades
               <Icon
                 icon="lucide:chevron-down"
                 className={`text-base transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}

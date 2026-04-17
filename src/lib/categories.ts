@@ -47,8 +47,7 @@ export const categories: Category[] = [
     heroHighlight: "Tecnologia de Elite",
     heroSubtitle:
       "Desenvolvido para as estradas mais desafiadoras. Nossas peças combinam aerodinâmica avançada com conforto térmico absoluto.",
-    heroImage:
-      "https://images.unsplash.com/photo-1541625602330-2277a4cd1f59?q=80&w=2000",
+    heroImage: "/img/ciclismo.jpg",
     heroDecorText: "CYCLING",
     advantages: [
       {
@@ -141,8 +140,7 @@ export const categories: Category[] = [
     heroHighlight: "Conforto Tático",
     heroSubtitle:
       "Peças desenvolvidas para os mais exigentes ambientes de competição. Tecidos reforçados com máxima liberdade de movimento.",
-    heroImage:
-      "https://images.unsplash.com/photo-Awb527VQiZ8?q=80&w=2000",
+    heroImage: "/img/tiro.jpg",
     heroDecorText: "SHOOTING",
     advantages: [
       {
@@ -319,8 +317,7 @@ export const categories: Category[] = [
     heroHighlight: "Vencem com Você",
     heroSubtitle:
       "Do campo amador ao profissional. Uniformes completos com design exclusivo, sublimação digital e entrega para todo o Brasil.",
-    heroImage:
-      "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=2000",
+    heroImage: "/img/futebol.jpg",
     heroDecorText: "FUTEBOL",
     advantages: [
       {
@@ -494,8 +491,7 @@ export const categories: Category[] = [
     heroHighlight: "Centro do Evento",
     heroSubtitle:
       "Camisetas promocionais, uniformes de equipe de eventos e kits corporativos. Produção rápida para datas especiais e grandes volumes.",
-    heroImage:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000",
+    heroImage: "/img/evento.jpg",
     heroDecorText: "EVENTOS",
     advantages: [
       {
@@ -580,8 +576,7 @@ export const categories: Category[] = [
     heroHighlight: "que Representa",
     heroSubtitle:
       "Uniformes corporativos que comunicam profissionalismo. Polos, camisetas e kits completos com a identidade da sua empresa.",
-    heroImage:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2000",
+    heroImage: "/img/corporativo.jpg",
     heroDecorText: "CORP",
     advantages: [
       {

@@ -2,6 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:unsplash.com)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\nelso\\OneDrive\\_ANTIGRAVITY\\sobrosa\\img"
     ]
   }
 }
