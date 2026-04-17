@@ -3,7 +3,7 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { categories } from "@/lib/categories";
 
 interface NavbarProps {
@@ -14,6 +14,16 @@ export default function Navbar({ dark = false }: NavbarProps) {
   const [cartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openDropdown = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimer.current = setTimeout(() => setDropdownOpen(false), 120);
+  };
 
   const bg = dark
     ? "bg-black/95 border-white/10"
@@ -50,8 +60,8 @@ export default function Navbar({ dark = false }: NavbarProps) {
           {/* Modalidades dropdown */}
           <li
             className="relative"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdown}
           >
             <button
               className={`flex items-center gap-1 transition-colors ${hoverColor}`}
@@ -64,9 +74,14 @@ export default function Navbar({ dark = false }: NavbarProps) {
               />
             </button>
 
+            {/* Invisible bridge to prevent gap from closing dropdown */}
+            <div className="absolute top-full left-0 w-full h-2" />
+
             {/* Dropdown panel */}
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-black border border-white/10 shadow-2xl transition-all duration-200 origin-top ${
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdown}
+              className={`absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-56 bg-black border border-white/10 shadow-2xl transition-all duration-200 origin-top ${
                 dropdownOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
               }`}
             >
