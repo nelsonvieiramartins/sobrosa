@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 
 const testimonials = [
   {
@@ -17,13 +16,13 @@ const testimonials = [
   },
 ];
 
-const logos = [
-  "https://upload.wikimedia.org/wikipedia/pt/d/de/Goi%C3%A1s_Esporte_Clube_logo.png",
-  "https://upload.wikimedia.org/wikipedia/pt/c/c5/Vila_Nova_Futebol_Clube_logo.png",
-  "https://www.shutterstock.com/image-vector/cycling-logo-mountain-bike-bicycle-260nw-1383344642.jpg",
-  "https://www.shutterstock.com/image-vector/outdoor-fishing-logo-retro-style-260nw-1830678587.jpg",
-  "https://www.shutterstock.com/image-vector/sports-tactical-shooting-club-logo-260nw-1772421935.jpg",
-  "https://www.shutterstock.com/image-vector/logo-bicycle-vector-monochrome-concept-260nw-1316417753.jpg",
+const brands = [
+  { icon: "simple-icons:nike", label: "Nike" },
+  { icon: "simple-icons:adidas", label: "Adidas" },
+  { icon: "simple-icons:puma", label: "Puma" },
+  { icon: "simple-icons:underarmour", label: "Under Armour" },
+  { icon: "simple-icons:newbalance", label: "New Balance" },
+  { icon: "simple-icons:reebok", label: "Reebok" },
 ];
 
 export default function SocialProof() {
@@ -73,16 +72,15 @@ export default function SocialProof() {
               <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-12">
                 Marcas e Clubes que confiam
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center opacity-40 grayscale">
-                {logos.map((src, i) => (
-                  <Image
-                    key={i}
-                    src={src}
-                    alt={`Parceiro ${i + 1}`}
-                    width={120}
-                    height={48}
-                    className="h-12 w-auto object-contain mx-auto"
-                  />
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center">
+                {brands.map((brand) => (
+                  <div key={brand.label} className="flex items-center justify-center opacity-30 hover:opacity-50 transition-opacity">
+                    <Icon
+                      icon={brand.icon}
+                      className="w-24 h-10"
+                      style={{ filter: "grayscale(1)" }}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

@@ -26,7 +26,6 @@ const col1 = allNavItems.slice(0, 4);
 const col2 = allNavItems.slice(4);
 
 export default function Navbar({ dark = false }: NavbarProps) {
-  const [cartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [hoveredSlug, setHoveredSlug] = useState(categories[0].slug);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,7 +45,6 @@ export default function Navbar({ dark = false }: NavbarProps) {
   const bg = dark ? "bg-black/95 border-white/10" : "bg-white/95 border-black/5";
   const textColor = dark ? "text-white" : "text-black";
   const hoverColor = dark ? "hover:text-orange-400" : "hover:text-orange-500";
-  const cartBadgeBg = dark ? "bg-white text-black" : "bg-black text-white";
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b ${bg}`}>
@@ -78,7 +76,7 @@ export default function Navbar({ dark = false }: NavbarProps) {
             onMouseLeave={closeDropdown}
           >
             <button
-              className={`flex items-center gap-1 transition-colors ${hoverColor}`}
+              className={`flex items-center gap-1 transition-colors uppercase ${hoverColor}`}
               style={{ color: dropdownOpen ? "#FF8C00" : undefined }}
             >
               Modalidades
@@ -198,15 +196,6 @@ export default function Navbar({ dark = false }: NavbarProps) {
 
         {/* Icons */}
         <div className={`flex items-center gap-6 ${textColor}`}>
-          <button className="hover:opacity-60 transition-opacity">
-            <Icon icon="lucide:search" className="text-2xl" />
-          </button>
-          <a href="#" className="relative hover:opacity-60 transition-opacity">
-            <Icon icon="lucide:shopping-bag" className="text-2xl" />
-            <span className={`absolute -top-1 -right-2 text-[10px] w-4 h-4 rounded-full flex items-center justify-center ${cartBadgeBg}`}>
-              {cartCount}
-            </span>
-          </a>
           <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
             <Icon icon={mobileOpen ? "lucide:x" : "lucide:menu"} className="text-2xl" />
           </button>

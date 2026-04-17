@@ -1,34 +1,39 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const niches = [
   {
     id: "ciclismo",
+    slug: "ciclismo",
     title: "Ciclismo",
     description: "Tecnologia Dry-Fit, proteção UV e modelagem aerodinâmica.",
     icon: "lucide:bike",
-    image: "https://images.unsplash.com/photo-1541625602330-2277a4cd1f59?q=80&w=800",
+    image: "/img/ciclismo.jpg",
   },
   {
     id: "tiro",
+    slug: "tiro-esportivo",
     title: "Tiro Esportivo",
     description: "Conforto tático, tecidos reforçados e alta mobilidade.",
     icon: "lucide:target",
-    image: "https://images.unsplash.com/photo-1605218403033-04022416f404?q=80&w=800",
+    image: "/img/tiro.jpg",
   },
   {
     id: "pesca",
+    slug: "pesca",
     title: "Pesca",
     description: "Proteção solar máxima e secagem ultrarrápida.",
     icon: "lucide:anchor",
-    image: "https://images.unsplash.com/photo-1529230117013-bc53b207908b?q=80&w=800",
+    image: "/img/pesca.jpeg",
   },
   {
     id: "futebol",
+    slug: "futebol",
     title: "Futebol",
     description: "Uniformes completos para times amadores e profissionais.",
     icon: "lucide:trophy",
-    image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800",
+    image: "/img/futebol.jpg",
   },
 ];
 
@@ -47,9 +52,9 @@ export default function NicheGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {niches.map((niche) => (
-            <a
+            <Link
               key={niche.id}
-              href="#"
+              href={`/categorias/${niche.slug}`}
               className="group relative h-[450px] overflow-hidden bg-black"
             >
               <Image
@@ -81,7 +86,7 @@ export default function NicheGrid() {
                   Ver Coleção
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
