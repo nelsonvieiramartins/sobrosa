@@ -27,6 +27,7 @@ export interface CommunityPhoto {
 export interface Category {
   slug: string;
   label: string;
+  heroImageFlip?: boolean;
   heroTitle: string;
   heroHighlight: string;
   heroSubtitle: string;
@@ -47,7 +48,7 @@ export const categories: Category[] = [
     heroSubtitle:
       "Desenvolvido para as estradas mais desafiadoras. Nossas peças combinam aerodinâmica avançada com conforto térmico absoluto.",
     heroImage:
-      "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2000",
+      "https://images.unsplash.com/photo-1541625602330-2277a4cd1f59?q=80&w=2000",
     heroDecorText: "CYCLING",
     advantages: [
       {
@@ -135,12 +136,13 @@ export const categories: Category[] = [
   {
     slug: "tiro-esportivo",
     label: "Tiro Esportivo",
+    heroImageFlip: true,
     heroTitle: "Precisão e",
     heroHighlight: "Conforto Tático",
     heroSubtitle:
       "Peças desenvolvidas para os mais exigentes ambientes de competição. Tecidos reforçados com máxima liberdade de movimento.",
     heroImage:
-      "https://images.unsplash.com/photo-1605218403033-04022416f404?q=80&w=2000",
+      "https://images.unsplash.com/photo-Awb527VQiZ8?q=80&w=2000",
     heroDecorText: "SHOOTING",
     advantages: [
       {

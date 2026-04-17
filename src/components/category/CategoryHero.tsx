@@ -11,6 +11,7 @@ export default function CategoryHero({ category }: { category: Category }) {
           alt={category.label}
           fill
           className="object-cover opacity-60 scale-105"
+          style={category.heroImageFlip ? { transform: "scaleX(-1)" } : undefined}
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />

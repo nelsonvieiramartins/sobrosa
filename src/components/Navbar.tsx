@@ -81,7 +81,7 @@ export default function Navbar({ dark = false }: NavbarProps) {
               className={`flex items-center gap-1 transition-colors ${hoverColor}`}
               style={{ color: dropdownOpen ? "#FF8C00" : undefined }}
             >
-              Modalidades
+              Categorias
               <Icon
                 icon="lucide:chevron-down"
                 className={`text-base transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
